@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/screens/elist.dart';
 import 'screens/signup.dart';
 
 // import 'nav.dart';
@@ -66,7 +67,7 @@ class Home extends StatelessWidget {
                   // style: style,
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => SignUp()));
+                        MaterialPageRoute(builder: (context) => ListViews()));
                   },
                   child: const Text('LISINT'),
                 ),

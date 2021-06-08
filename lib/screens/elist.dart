@@ -8,7 +8,7 @@ class ListViews extends StatelessWidget {
       appBar: AppBar(
         title: Container(
           child: Text(
-            "Cell Phones",
+            "Mobiles Phones",
             style: TextStyle(
               color: Colors.black,
               fontWeight: FontWeight.bold,
@@ -19,7 +19,7 @@ class ListViews extends StatelessWidget {
         backgroundColor: Colors.white,
         actions: [
           Icon(
-            Icons.notification_add_outlined,
+            Icons.notifications,
             color: Colors.black,
             size: 30.0,
           ),
@@ -60,9 +60,9 @@ class ListViews extends StatelessWidget {
                   phones(
                       "iPhone12pro 64GB", 'images/mob5.jpg', 5.0, 23, '1500'),
                   phones("Nokia", 'images/mob6.jpg', 4.5, 34, '100'),
-                  phones("iPhone12", 'images/mob2.jpg', 4.5, 34, '1300'),
-                  phones("iPhone12", 'images/mob3.jpg', 4.0, 33, '1250'),
-                  phones("iPhone11", 'images/mob4.jpg', 4.5, 32, '1000'),
+                  // phones("iPhone12", 'images/mob2.jpg', 4.5, 34, '1300'),
+                  // phones("iPhone12", 'images/mob3.jpg', 4.0, 33, '1250'),
+                  // phones("iPhone11", 'images/mob4.jpg', 4.5, 32, '1000'),
                 ],
               ),
             ),

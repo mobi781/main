@@ -6,106 +6,109 @@ class SignUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Scaffold(
-      appBar: AppBar(
-        title: Container(
-          child: Text(
-            "USER DASHBOARD",
-            style: TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Container(
+            child: Text(
+              "USER DASHBOARD",
+              style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
+          centerTitle: true,
+          backgroundColor: Colors.white,
+          actions: [
+            Icon(
+              Icons.notifications,
+              color: Colors.black,
+              size: 30.0,
+            ),
+          ],
         ),
-        centerTitle: true,
-        backgroundColor: Colors.white,
-        actions: [
-          Icon(
-            Icons.notifications,
-            color: Colors.black,
-            size: 30.0,
-          ),
-        ],
-      ),
-      body: Column(
-        children: [
-          Row(
+        body: SingleChildScrollView(
+          child: Column(
             children: [
-              // Image.asset('images/a1.jpg', fit: BoxFit.fitWidth),
-              CircleAvatar(
-                backgroundImage: AssetImage('images/download.png'),
-                radius: 75,
-              ),
-              Column(
+              Row(
                 children: [
-                  SizedBox(
-                    width: 20,
+                  // Image.asset('images/a1.jpg', fit: BoxFit.fitWidth),
+                  CircleAvatar(
+                    backgroundImage: AssetImage('images/download.png'),
+                    radius: 75,
                   ),
-                  Text("USER",
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 35)),
-                  Text("abc@gmail.com",
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 30)),
-                  Text(
-                    "Logout",
-                    style: TextStyle(color: Colors.purpleAccent),
+                  Column(
+                    children: [
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Text("USER",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 35)),
+                      Text("abc@gmail.com",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 30)),
+                      Text(
+                        "Logout",
+                        style: TextStyle(color: Colors.purpleAccent),
+                      )
+                    ],
                   )
                 ],
+              ),
+              SizedBox(height: 20),
+              Text("Account Information",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.lightBlueAccent,
+                    fontSize: 35,
+                  )),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 20,
+                  horizontal: 25,
+                ),
+                child: Column(
+                  children: [
+                    TextFormField(
+                      decoration: InputDecoration(
+                        hintText: "Enter Full Name",
+                        labelText: "Name",
+                      ),
+                    ),
+                    TextFormField(
+                      // obscureText: true, This is use for to hide password
+                      decoration: InputDecoration(
+                        hintText: "Enter Email",
+                        labelText: "Email",
+                      ),
+                    ),
+                    TextFormField(
+                      decoration: InputDecoration(
+                        hintText: "Enter Phone No.",
+                        labelText: "Phone NO.",
+                      ),
+                    ),
+                    TextFormField(
+                      decoration: InputDecoration(
+                        hintText: "Enter Address",
+                        labelText: "Address",
+                      ),
+                    ),
+                    TextFormField(
+                      decoration: InputDecoration(
+                        hintText: "Date of Birth",
+                        labelText: "DOB",
+                      ),
+                    ),
+                  ],
+                ),
               )
             ],
           ),
-          SizedBox(height: 20),
-          Text("Account Information",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Colors.lightBlueAccent,
-                fontSize: 35,
-              )),
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              vertical: 20,
-              horizontal: 25,
-            ),
-            child: Column(
-              children: [
-                TextFormField(
-                  decoration: InputDecoration(
-                    hintText: "Enter Full Name",
-                    labelText: "Name",
-                  ),
-                ),
-                TextFormField(
-                  // obscureText: true, This is use for to hide password
-                  decoration: InputDecoration(
-                    hintText: "Enter Email",
-                    labelText: "Email",
-                  ),
-                ),
-                TextFormField(
-                  decoration: InputDecoration(
-                    hintText: "Enter Phone No.",
-                    labelText: "Phone NO.",
-                  ),
-                ),
-                TextFormField(
-                  decoration: InputDecoration(
-                    hintText: "Enter Address",
-                    labelText: "Address",
-                  ),
-                ),
-                TextFormField(
-                  decoration: InputDecoration(
-                    hintText: "Date of Birth",
-                    labelText: "DOB",
-                  ),
-                ),
-              ],
-            ),
-          )
-        ],
+        ),
       ),
-    ));
+    );
   }
 }
 // home: Scaffold(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/screens/Electronics.dart';
 import 'package:flutter_application_2/screens/elist.dart';
 import 'screens/signup.dart';
 
@@ -43,6 +44,7 @@ class Home extends StatelessWidget {
         body: Container(
           child: Center(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(height: 30),
                 ElevatedButton(
@@ -58,7 +60,7 @@ class Home extends StatelessWidget {
                   // style: style,
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => SignUp()));
+                        MaterialPageRoute(builder: (context) => Electronics()));
                   },
                   child: const Text('ECOMMERCE'),
                 ),
@@ -69,7 +71,7 @@ class Home extends StatelessWidget {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => ListViews()));
                   },
-                  child: const Text('LISINT'),
+                  child: const Text('Listing'),
                 ),
               ],
             ),

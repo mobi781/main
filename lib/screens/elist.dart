@@ -8,7 +8,7 @@ class ListViews extends StatelessWidget {
             appBar: AppBar(
               title: Container(
                 child: Text(
-                  "Form",
+                  "Cell Phones",
                   style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
@@ -29,7 +29,7 @@ class ListViews extends StatelessWidget {
               children: [
                 ListTile(
                   leading: CircleAvatar(
-                    backgroundImage: AssetImage('images/a1.jpg'),
+                    backgroundImage: AssetImage('images/mob1.jpg'),
                     radius: 20,
                   ),
                   title: Text('Iphone12'),
@@ -37,25 +37,25 @@ class ListViews extends StatelessWidget {
                   trailing: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Text("1200"),
+                      Text("\$1200"),
                     ],
                   ),
                 ),
                 ListTile(
                   leading: CircleAvatar(
-                    backgroundImage: AssetImage('images/a1.jpg'),
+                    backgroundImage: AssetImage('images/mob2.jpg'),
                     radius: 20,
                   ),
                   title: Text('Iphone12'),
                   subtitle: Text('5.0 (23 Reviews)'),
                   trailing: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [Text('1200')],
+                    children: [Text('\$1100')],
                   ),
                 ),
                 ListTile(
                   leading: CircleAvatar(
-                    backgroundImage: AssetImage('images/a1.jpg'),
+                    backgroundImage: AssetImage('images/mob3.jpg'),
                     radius: 20,
                   ),
                   title: Text('Iphone12'),
@@ -63,7 +63,7 @@ class ListViews extends StatelessWidget {
                   trailing: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Text('1200'),
+                      Text('\$1000'),
                     ],
                   ),
                 )

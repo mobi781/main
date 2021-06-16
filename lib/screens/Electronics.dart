@@ -60,24 +60,31 @@ Widget items(String img, String name, String rating, String rev, String price,
       child: Container(
         margin: EdgeInsets.all(5),
         decoration: BoxDecoration(
-            color: Colors.grey,
-            borderRadius: BorderRadius.circular(10),
-            border: Border.all(
-              color: Colors.lightBlue,
-            )), //MediaQuery.of().size.width
+          color: Colors.brown[50],
+          borderRadius: BorderRadius.circular(10),
+          // border: Border.all(
+          //   color: Colors.lightBlue,
+        ),
+        // ), //MediaQuery.of().size.width
         child: Row(
           children: [
-            Container(
-              // height: 200,
-              width: 175,
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.transparent,
+            Padding(
+              padding: const EdgeInsets.all(0.0),
+              child: Container(
+                // height: 200,
+                width: 175,
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.transparent,
+                  ),
+                  borderRadius: BorderRadius.circular(10),
+                  // borderRadius: BorderRadius.all(Radius.circular(20))
                 ),
-                borderRadius: BorderRadius.circular(15),
-                // borderRadius: BorderRadius.all(Radius.circular(20))
+                // child: Image.asset(img),
+                child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image(image: AssetImage(img))),
               ),
-              child: Image.asset(img),
             ),
             Container(
               child: Padding(

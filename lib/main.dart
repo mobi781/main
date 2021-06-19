@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/calc.dart';
 import 'package:flutter_application_2/screens/Electronics.dart';
 import 'package:flutter_application_2/screens/elist.dart';
 import 'screens/signup.dart';
@@ -72,6 +73,15 @@ class Home extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => ListViews()));
                   },
                   child: const Text('Listing'),
+                ),
+                SizedBox(height: 30),
+                ElevatedButton(
+                  // style: style,
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Calc()));
+                  },
+                  child: const Text('Calc'),
                 ),
               ],
             ),

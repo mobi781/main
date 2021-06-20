@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/calc.dart';
+import 'package:flutter_application_2/screens/calc.dart';
 import 'package:flutter_application_2/screens/Electronics.dart';
 import 'package:flutter_application_2/screens/elist.dart';
+import 'package:flutter_application_2/screens/todos.dart';
 import 'screens/signup.dart';
 
 // import 'nav.dart';
@@ -45,9 +46,9 @@ class Home extends StatelessWidget {
         body: Container(
           child: Center(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              // mainAxisAlignment: MainAxisAlignment.center,
+              // crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(height: 30),
                 ElevatedButton(
                   // style: style,
                   onPressed: () {
@@ -56,7 +57,6 @@ class Home extends StatelessWidget {
                   },
                   child: const Text('SIGNUP'),
                 ),
-                SizedBox(height: 30),
                 ElevatedButton(
                   // style: style,
                   onPressed: () {
@@ -65,7 +65,6 @@ class Home extends StatelessWidget {
                   },
                   child: const Text('ECOMMERCE'),
                 ),
-                SizedBox(height: 30),
                 ElevatedButton(
                   // style: style,
                   onPressed: () {
@@ -74,7 +73,6 @@ class Home extends StatelessWidget {
                   },
                   child: const Text('Listing'),
                 ),
-                SizedBox(height: 30),
                 ElevatedButton(
                   // style: style,
                   onPressed: () {
@@ -83,6 +81,17 @@ class Home extends StatelessWidget {
                   },
                   child: const Text('Calc'),
                 ),
+                TextButton(
+                  style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all<Color>(Colors.purple[300]),
+                  ),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Todos()));
+                  },
+                  child: Text('todos', style: TextStyle(color: Colors.white)),
+                )
               ],
             ),
           ),

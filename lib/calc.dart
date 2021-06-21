@@ -24,7 +24,7 @@ class _CalcState extends State<Calc> {
         },
         child: Text(
           val,
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: Colors.black,fontSize: 30),
         ));
   }
 
@@ -101,7 +101,7 @@ class _CalcState extends State<Calc> {
                               onPressed: cls,
                               child: Text(
                                 "AC",
-                                style: TextStyle(color: Colors.amber),
+                                style: TextStyle(color: Colors.amber,fontSize: 30),
                               )),
                           ElevatedButton(
                               style: ElevatedButton.styleFrom(
@@ -112,7 +112,7 @@ class _CalcState extends State<Calc> {
                               onPressed: cls,
                               child: Text(
                                 "C",
-                                style: TextStyle(color: Colors.amber),
+                                style: TextStyle(color: Colors.amber,fontSize: 30),
                               )),
                           // buttonn("AC"),
                           // buttonn("C"),
@@ -174,7 +174,7 @@ class _CalcState extends State<Calc> {
                               onPressed: output,
                               child: Text(
                                 "=",
-                                style: TextStyle(color: Colors.red),
+                                style: TextStyle(color: Colors.red,fontSize: 30),
                               ))
                           // ElevatedButton(onPressed: cls, child: Text("=")),
                           // buttonn("="),

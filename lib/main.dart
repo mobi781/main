@@ -38,16 +38,16 @@ class Home extends StatelessWidget {
             Icon(
               Icons.notifications,
               color: Colors.black,
-              size: 30.0,
+              size: 20.0,
             ),
           ],
         ),
         body: Container(
           child: Center(
-            child: Column(
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(height: 30),
+                SizedBox(height: 20),
                 ElevatedButton(
                   // style: style,
                   onPressed: () {
@@ -56,7 +56,7 @@ class Home extends StatelessWidget {
                   },
                   child: const Text('SIGNUP'),
                 ),
-                SizedBox(height: 30),
+                SizedBox(height: 20),
                 ElevatedButton(
                   // style: style,
                   onPressed: () {
@@ -65,7 +65,7 @@ class Home extends StatelessWidget {
                   },
                   child: const Text('ECOMMERCE'),
                 ),
-                SizedBox(height: 30),
+                SizedBox(height: 20),
                 ElevatedButton(
                   // style: style,
                   onPressed: () {
@@ -74,7 +74,7 @@ class Home extends StatelessWidget {
                   },
                   child: const Text('Listing'),
                 ),
-                SizedBox(height: 30),
+                SizedBox(height: 20),
                 ElevatedButton(
                   // style: style,
                   onPressed: () {
@@ -107,7 +107,7 @@ class Home extends StatelessWidget {
 //       Icon(
 //         Icons.favorite,
 //         color: Colors.black,
-//         size: 30.0,
+//         size: 20.0,
 //       ),
 //     ],
 //   ),

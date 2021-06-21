@@ -69,11 +69,13 @@ class _CalcState extends State<Calc> {
               ],
             ),
             body: SingleChildScrollView(
+              
               child: Container(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.end,
+                  // crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
+                    SizedBox(height: 300),
                     Text(
                       result,
                       style: TextStyle(

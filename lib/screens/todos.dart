@@ -16,21 +16,20 @@ class _TodosState extends State<Todos> {
     return MaterialApp(
       home: Scaffold(
         body: ListView.builder(
-          shrinkWrap: true,
+            shrinkWrap: true,
             itemCount: todos.length,
             itemBuilder: (context, index) {
               return Container(
-              // BoxFit:BoxFit.fill
-                decoration: BoxDecoration(),
-      
+                // BoxFit:BoxFit.fill
+                // decoration: BoxDecoration(),
+
                 // width: MediaQuery.of(context).size.width * .85,
                 height: 50,
                 color: Colors.amberAccent,
                 child: ListTile(
                   title: Text("${todos[index]}"),
                   trailing: Container(
-                   
-                    width: 40,
+                    // width: 40,
                     child: Row(
                       children: [
                         GestureDetector(

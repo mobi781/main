@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/calc.dart';
+import 'package:flutter_application_2/new_screen.dart';
 import 'package:flutter_application_2/screens/Electronics.dart';
 import 'package:flutter_application_2/screens/elist.dart';
 import 'screens/signup.dart';
@@ -14,7 +15,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Home());
+    return MaterialApp(home: NewScreen());
   }
 }
 
@@ -38,16 +39,17 @@ class Home extends StatelessWidget {
             Icon(
               Icons.notifications,
               color: Colors.black,
-              size: 20.0,
+              size: 10.0,
             ),
           ],
         ),
         body: Container(
           child: Center(
-            child: Row(
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                SizedBox(height: 20),
+                SizedBox(height: 10),
                 ElevatedButton(
                   // style: style,
                   onPressed: () {
@@ -56,7 +58,7 @@ class Home extends StatelessWidget {
                   },
                   child: const Text('SIGNUP'),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 10),
                 ElevatedButton(
                   // style: style,
                   onPressed: () {
@@ -65,7 +67,7 @@ class Home extends StatelessWidget {
                   },
                   child: const Text('ECOMMERCE'),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 10),
                 ElevatedButton(
                   // style: style,
                   onPressed: () {
@@ -74,7 +76,7 @@ class Home extends StatelessWidget {
                   },
                   child: const Text('Listing'),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 10),
                 ElevatedButton(
                   // style: style,
                   onPressed: () {
@@ -82,6 +84,15 @@ class Home extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => Calc()));
                   },
                   child: const Text('Calc'),
+                ),
+                SizedBox(height: 10),
+                ElevatedButton(
+                  // style: style,
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => NewScreen()));
+                  },
+                  child: const Text('NewScreen'),
                 ),
               ],
             ),
@@ -107,7 +118,7 @@ class Home extends StatelessWidget {
 //       Icon(
 //         Icons.favorite,
 //         color: Colors.black,
-//         size: 20.0,
+//         size: 10.0,
 //       ),
 //     ],
 //   ),

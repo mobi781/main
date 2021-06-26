@@ -1,0 +1,11 @@
+{
+    "launch": {
+
+        "configurations": [],
+        "compounds": []
+    },
+    "editor.fontSize": 16,
+    "editor.mouseWheelZoom": true,
+    "editor.minimap.scale": 2,
+    "editor.minimap.showSlider": "always"
+}

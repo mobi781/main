@@ -14,36 +14,56 @@ class _TodosState extends State<Todos> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        body: ListView.builder(
-            shrinkWrap: true,
-            itemCount: todos.length,
-            itemBuilder: (context, index) {
-              return Container(
-                // BoxFit:BoxFit.fill
-                // decoration: BoxDecoration(),
-
-                // width: MediaQuery.of(context).size.width * .85,
-                height: 50,
-                color: Colors.amberAccent,
-                child: ListTile(
-                  title: Text("${todos[index]}"),
-                  trailing: Container(
-                    // width: 40,
-                    child: Row(
-                      children: [
-                        GestureDetector(
-                            onTap: () {
-                              showDialog(
-                                  context: context,
-                                  builder: (context) {
-                                    return AlertDialog(
-                                      title: Text("Update"),
-                                      content: TextField(onChanged: (value) {
-                                        outputt = value;
-                                      }),
-                                      actions: [
-                                        ElevatedButton(
+      home: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            title: Text(
+              "Todos",
+              style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+              ),
+            ),
+            centerTitle: true,
+            backgroundColor: Colors.white,
+            actions: [
+              Icon(
+                Icons.notifications,
+                color: Colors.black,
+                size: 30.0,
+              ),
+            ],
+          ),
+          body: ListView.builder(
+              shrinkWrap: true,
+              itemCount: todos.length,
+              itemBuilder: (context, index) {
+                return Container(
+                    // BoxFit:BoxFit.fill
+                    // decoration: BoxDecoration(),
+                    margin: EdgeInsets.all(8.0),
+                    // height: 50,
+                    color: Colors.amberAccent,
+                    child: ListTile(
+                      title: Text("${todos[index]}"),
+                      trailing: SizedBox(
+                        width: 50,
+                        height: 50,
+                        child: Row(
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                showDialog(
+                                    context: context,
+                                    builder: (context) {
+                                      return AlertDialog(
+                                        title: Text("Update"),
+                                        content: TextField(onChanged: (value) {
+                                          outputt = value;
+                                        }),
+                                        actions: [
+                                          ElevatedButton(
                                             onPressed: () {
                                               setState(() {
                                                 todos.replaceRange(
@@ -53,49 +73,53 @@ class _TodosState extends State<Todos> {
                                               });
                                               Navigator.of(context).pop();
                                             },
-                                            child: Text("Update"))
-                                      ],
-                                    );
-                                  });
-                            },
-                            child: Icon(Icons.edit)),
-                        GestureDetector(
-                            onTap: () {
+                                            child: Text("Update"),
+                                          ),
+                                        ],
+                                      );
+                                    });
+                              },
+                              child: Icon(Icons.edit),
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  todos.removeAt(index);
+                                });
+                              },
+                              child: Icon(Icons.delete),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ));
+              }),
+          floatingActionButton: FloatingActionButton(
+            onPressed: () {
+              showDialog(
+                  context: context,
+                  builder: (context) {
+                    return AlertDialog(
+                      title: Text("NewTask"),
+                      content: TextField(onChanged: (value) {
+                        outputt = value;
+                      }),
+                      actions: [
+                        ElevatedButton(
+                            onPressed: () {
                               setState(() {
-                                todos.removeAt(index);
+                                todos.add(outputt);
                               });
+                              Navigator.of(context)
+                                  .pop(); // it will disappear thedialogafterpress add button
                             },
-                            child: Icon(Icons.delete)),
+                            child: Text("Add"))
                       ],
-                    ),
-                  ),
-                ),
-              );
-            }),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            showDialog(
-                context: context,
-                builder: (context) {
-                  return AlertDialog(
-                    title: Text("NewTask"),
-                    content: TextField(onChanged: (value) {
-                      outputt = value;
-                    }),
-                    actions: [
-                      ElevatedButton(
-                          onPressed: () {
-                            setState(() {
-                              todos.add(outputt);
-                            });
-                            Navigator.of(context).pop();
-                          },
-                          child: Text("Add"))
-                    ],
-                  );
-                });
-          },
-          child: Text("Add"),
+                    );
+                  });
+            },
+            child: Text("Add"),
+          ),
         ),
       ),
     );
